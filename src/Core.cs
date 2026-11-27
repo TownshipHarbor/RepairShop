@@ -14,7 +14,7 @@ namespace RepairShopQuest
     public sealed class Core : MelonMod
     {
         internal const string Name = "RepairShopQuest";
-        internal const string Version = "0.1.0";
+        internal const string Version = "0.1.1";
         static MelonLogger.Instance _log;
         static bool _running, _reset;
         readonly string[] _last = new string[4];

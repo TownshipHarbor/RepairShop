@@ -2,7 +2,6 @@ using System.Globalization;
 using System.Linq;
 using HarmonyLib;
 using UnityEngine;
-using UnityEngine.AI;
 using Il2Cpp;
 using Il2CppAlta.Intelligence;
 
@@ -124,11 +123,6 @@ namespace RepairShopQuest
                 {
                     childPosition = ghost.transform.localPosition;
                     childRotation = ghost.transform.localRotation;
-                }
-                NavMeshAgent[] componentsInChildren = Plat.All<NavMeshAgent>(transform, true).ToArray();
-                for (int i = 0; i < componentsInChildren.Length; i++)
-                {
-                    componentsInChildren[i].enabled = false;
                 }
                 Rigidbody[] componentsInChildren2 = Plat.All<Rigidbody>(transform, true).ToArray();
                 foreach (Rigidbody obj in componentsInChildren2)
